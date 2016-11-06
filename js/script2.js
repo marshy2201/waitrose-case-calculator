@@ -40,34 +40,41 @@
       
       //Days & Nights conditional statement Minutes
       var mins = 0;
+      var hours = 0;
+      var TotalInMins = 0;
       
       if ($(this).is('[name="cases"]')) {
       
         //Mins per group days
         
         $(this).each(function() {
-            mins += ($(this).val() / 35) * 60;
+            TotalInMins = mins += ($(this).val() / 35) * 60;
+            hours += Math.floor(mins / 60);
+            mins = mins % 60;
         });
         
         if (isNaN(mins)) {
           mins = 0;  
         }
         
-        $(this).parent().next().children().val(mins.toFixed(0) + ' mins');
+        $(this).parent().next().children().val(hours.toFixed(0) + ' hour(s)');
+        $(this).parent().next().children().eq(1).val(mins.toFixed(0) + ' mins');
         
       } else {
       
         //Mins per group nights
         
         $(this).each(function() {
-          mins += ($(this).val() / 45) * 60;
+            TotalInMins = mins += ($(this).val() / 45) * 60;
+            hours += Math.floor(mins / 60);
+            mins = mins % 60;
         });
         
         if (isNaN(mins)) {
           mins = 0;  
         }
         
-        $(this).parent().next().children().val(mins.toFixed(0) + ' mins');
+        $(this).parent().next().children().eq(1).val(mins.toFixed(0) + ' mins');
         
       }
       
@@ -76,7 +83,7 @@
       var totalMins = 0;
       
       $('input[name="mins"]').each(function() {
-        totalMins += parseInt($(this).val());
+          totalMins += parseInt($(this).val());
       });
 
       var totalHours = Math.floor(totalMins / 60);
