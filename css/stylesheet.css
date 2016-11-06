@@ -167,13 +167,17 @@
      padding: 20px 0;
    }
    
-   #case-total, input[name="mins"], #mins-total, #hours-total {
+   #case-total, input[name="mins"], #mins-total, #hours-total, input[name="hours"], input[name="mins2"] {
     background-color: #ddd;
     border: none;
     color: #000;
    }
+
+    input[name="mins"] {
+        display: none;
+    }
    
-   input[name="mins"] {
+   input[name="mins"], input[name="hours"], input[name="mins2"] {
     background-color: #fff;
    }
    
@@ -234,6 +238,10 @@
    
     table {
       width: 50%;
+    }
+
+    input[name="hours"], input[name="mins2"] {
+        width: 40%;
     }
    
    }
