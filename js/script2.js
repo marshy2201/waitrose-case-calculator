@@ -40,6 +40,7 @@
       
       //Days & Nights conditional statement Minutes
       var mins = 0;
+      var hours = 0;
       
       if ($(this).is('[name="cases"]')) {
       
@@ -48,12 +49,17 @@
         $(this).each(function() {
             mins += ($(this).val() / 35) * 60;
         });
+
+        hours = Math.floor(mins / 60);
+        var minsLeft = mins % 60;
         
         if (isNaN(mins)) {
           mins = 0;  
         }
         
-        $(this).parent().next().children().val(mins.toFixed(0) + ' mins');
+        $(this).parent().next().children().val(hours.toFixed(0) + ' hour(s)');
+        $(this).parent().next().children().eq(1).val(minsLeft.toFixed(0) + ' min(s)');
+        $(this).parent().next().children().eq(2).val(mins.toFixed(0));
         
       } else {
       
@@ -62,12 +68,17 @@
         $(this).each(function() {
           mins += ($(this).val() / 45) * 60;
         });
+
+        hours = Math.floor(mins / 60);
+        var minsLeft = mins % 60;
         
         if (isNaN(mins)) {
           mins = 0;  
         }
         
-        $(this).parent().next().children().val(mins.toFixed(0) + ' mins');
+        $(this).parent().next().children().val(hours.toFixed(0) + ' hour(s)');
+        $(this).parent().next().children().eq(1).val(minsLeft.toFixed(0) + ' min(s)');
+        $(this).parent().next().children().eq(2).val(mins.toFixed(0));
         
       }
       
