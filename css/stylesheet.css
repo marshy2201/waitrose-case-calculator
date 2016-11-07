@@ -204,7 +204,8 @@
    }
 
    input:disabled, #case-total:disabled, #hours-total:disabled, #mins-total:disabled {
-    -webkit-text-fill-color: #000; 
+    -webkit-text-fill-color: #000;
+    opacity: 1; 
    }
    
    /****************
