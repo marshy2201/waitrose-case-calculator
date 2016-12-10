@@ -2,7 +2,11 @@
   /*********************
    Home Page
   **********************/
-  
+
+* {
+    box-sizing: border-box;
+}
+
   body {
     display: flex;
     min-height: 100vh;
@@ -13,6 +17,10 @@
     background-position: 0 0, 0 103%;
     font-family: 'Open Sans', sans-serif;    
   }
+
+    section {
+        margin: auto;
+    }
   
   li a {
     text-decoration: none;
