@@ -11,16 +11,23 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url('../img/lines3.png'), url('../img/lines4.png');
+    background-image: url('../img/lines3.png'), 
+                      url('../img/lines4.png');
     background-repeat: repeat-x;
     background-size: 1200px;
-    background-position: 0 0, 0 103%;
+    background-position: 0 47px, 
+                         0 97%;
     font-family: 'Open Sans', sans-serif;    
   }
+
+    #body-index-page {
+        height: 100vh;
+    }
 
     section {
         margin: auto;
         width: 100%;
+        padding: 30px 0 50px;
     }
   
   li a {
@@ -42,13 +49,22 @@
   
   header {
     background-color: #4d8e0b;
+    border-bottom: 6px solid #555;
+    padding: 18px 0;
   }
+
+  img {
+    width: 60px;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+   }
   
   h1 {
     margin: 0;
     color: #fff;
     padding: 10px 0;
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .sections-title {
@@ -63,6 +79,7 @@
   nav {
     margin: auto;
     width: 100%;
+    padding: 80px 0;
   }
   
   ul {
@@ -89,7 +106,8 @@
     text-align: center;
     background-color: #333;
     color: #fff;
-    padding: 5px 0;
+    padding: 24px 0;
+    border-top: 6px solid #4d8e0b;
   }
   
   /***********************
@@ -194,13 +212,6 @@
     text-align: left;
     padding-left: 10px;
    }
-   
-   img {
-    width: 45px;
-    position: absolute;
-    right: 5px;
-    top: 0px;
-   }
 
    input[type=number]::-webkit-outer-spin-button,
    input[type=number]::-webkit-inner-spin-button {
@@ -211,21 +222,20 @@
    input[type=number] {
     -moz-appearance:textfield;
    }
-
-   input:disabled, #case-total:disabled, #hours-total:disabled, #mins-total:disabled {
-    -webkit-text-fill-color: #000;
-    opacity: 1; 
-   }
    
    /****************
     Media Queries
     ****************/
    
-   @media (min-width: 680px) {
+   @media (min-width: 690px) {
    
     ul {
-      width: 500px;
+      width: 700px;
       margin: 0 auto;  
+    }
+
+    li a {
+        padding: 30px; 
     }
     
     .sections-title {
@@ -252,6 +262,10 @@
 
     input[name="hours"], input[name="mins2"] {
         width: 40%;
+    }
+
+    img {
+        right: 30px;
     }
    
    }
