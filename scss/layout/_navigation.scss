@@ -1,0 +1,47 @@
+﻿
+li {
+    background-color: $color1;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 1.2em; 
+
+    &:hover {
+        background-color: #335f07;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        padding: 20px;
+
+        @media #{$brk-tablet} {
+            padding: 30px;
+        }
+    }  
+}
+
+nav {
+    margin: auto;
+    width: 100%;
+    padding: 80px 0;
+
+    ul {
+        background-image: url('img/waitrose.png');
+        margin-bottom: 30px;
+
+        @media #{$brk-tablet} {
+            width: 700px;
+            margin: 0 auto;    
+        }
+    }
+
+    h2 {
+        text-decoration: underline;
+        font-size: 1.2em;
+    }
+ }
+  
+
+  
