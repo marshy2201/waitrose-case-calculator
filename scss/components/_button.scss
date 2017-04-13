@@ -1,0 +1,11 @@
+﻿
+img {
+    width: 60px;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+
+    @media #{$brk-desktop} {
+        right: 30px;
+    }
+}

@@ -1,0 +1,17 @@
+﻿
+input {
+    width: 70%;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
